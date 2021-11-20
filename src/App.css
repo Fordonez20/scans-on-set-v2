@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.Scanner {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

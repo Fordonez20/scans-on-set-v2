@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import Scanner from './Scanner';
+import NewScanner from './NewScanner';
 //import { useEffect } from 'react';
 //import useState from 'react-hook-use-state';
 //import logo from './logo.svg';
@@ -71,16 +73,28 @@ class App extends React.Component {
     this.getItems();
   }
 
+  getOneItem = async (productId) => {
+    
+    let data = await api.get(`/product?productId=${productId}`).then(({ data }) => data );
+    console.log(data);
+  }
+
+  
   render() {
   return (
     <div className="App">
       <header className = "App-header">
+
         
+
+        <Scanner/>
+
 
         {this.state.items.map(item => 
         <h2 key={item.productId} /*onClick={() =>this.updateItem(item.productId, `Updated`)}*/>
           <button onClick={() =>this.updateItem(item.productId, item.color)}> Update This Item</button>
-          {item.productName} {item.color}
+          {item.productName} 
+          {item.color}
         </h2>)}
 
         <button /*onClick={this.createItem}*/> Create An Item (off atm)</button>
