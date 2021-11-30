@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 
-const api = axios.create({
-    baseURL: `https://ad37vz2hch.execute-api.us-east-2.amazonaws.com/prod`
-})
+//const api = axios.create({
+//    baseURL: `https://ad37vz2hch.execute-api.us-east-2.amazonaws.com/prod`
+//})
 
 function Greeting(props) {
     const isLoggedIn = props.isLoggedIn;
@@ -35,7 +35,7 @@ class NewScanner extends React.Component {
         this.setState({isLoggedIn: true});
         console.log(this.state.name);
 
-        let submittedName = this.state.name;
+    //    let submittedName = this.state.name;
         //let data = await api.get(`/product?productId=${submittedName}`).then(({ data }) => data );
         //console.log(data);
     }

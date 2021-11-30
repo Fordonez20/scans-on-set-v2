@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import axios from 'axios';
 import Scanner from './Scanner';
-import NewScanner from './NewScanner';
+//import NewScanner from './NewScanner';
 //import { useEffect } from 'react';
 //import useState from 'react-hook-use-state';
 //import logo from './logo.svg';
@@ -45,23 +45,23 @@ class App extends React.Component {
   }
 
   updateItem = async (productId, val) => {
-    if (val === 'OUT') {
-      let data = await api.patch('/product', { 
-        "productId": productId,
-        "updateKey": "color",
-        "updateValue": "IN"
+    //if (val === 'OUT') {
+      //let data = await api.patch('/product', { 
+      //  "productId": productId,
+      //  "updateKey": "color",
+      //  "updateValue": "IN"
   
-      })
+      //})
 
-    } else {
-      let data = await api.patch('/product', { 
-        "productId": productId,
-        "updateKey": "color",
-        "updateValue": "OUT"
+    //} else {
+    //  let data = await api.patch('/product', { 
+    //    "productId": productId,
+    //    "updateKey": "color",
+    //    "updateValue": "OUT"
   
-      })
+    //  })
 
-    }
+    ///}
 
 
     /*let data = await api.patch('/product', { 
